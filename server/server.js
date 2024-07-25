@@ -8,7 +8,7 @@ const mongoose = require("mongoose");
 
 mongoose.set("strictQuery", false);
 
-const PORT = process.env.PORT || 3001;
+const PORT = process.env.PORT || 3881;
 const app = express();
 
 const server = new ApolloServer({

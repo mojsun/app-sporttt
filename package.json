@@ -25,5 +25,8 @@
     "graphql": "^16.9.0",
     "react-bootstrap": "^2.7.2",
     "react-icons": "^4.8.0"
+  },
+  "engines": {
+    "node": "14.x"
   }
 }
