@@ -5,6 +5,7 @@ const { authMiddleware } = require("./utils/auth");
 const { typeDefs, resolvers } = require("./schemas");
 const db = require("./config/connection");
 const mongoose = require("mongoose");
+require("dotenv").config();
 
 mongoose.set("strictQuery", false);
 
@@ -25,7 +26,7 @@ app.use(express.json());
 if (process.env.NODE_ENV === "production") {
   app.use(express.static(path.join(__dirname, "../client/build")));
   app.get("*", (req, res) => {
-    res.sendFile(path.join(__dirname, "../client/build/index.html"));
+    res.sendFile(path.join(__dirname, "../client/build", "index.html"));
   });
 } else {
   app.get("/", (req, res) => {
