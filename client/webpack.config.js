@@ -129,22 +129,12 @@ module.exports = {
     },
     host: "0.0.0.0",
     port: 3000,
-    allowedHosts: ["appsportt-8aab89cb6b82.herokuapp.com"],
+    allowedHosts: [
+      "appsportt-8aab89cb6b82.herokuapp.com", // Explicitly allow your Heroku app's URL
+    ],
     headers: {
       "Access-Control-Allow-Origin": "*",
     },
-    historyApiFallback: true, // Ensure routing works correctly
-    // You can remove this if not needed
-    // setupMiddlewares: (middlewares, devServer) => {
-    //   if (!devServer) {
-    //     throw new Error("webpack-dev-server is not defined");
-    //   }
-
-    //   devServer.app.get("/some/path", (req, res) => {
-    //     res.json({ custom: "response" });
-    //   });
-
-    //   return middlewares;
-    // },
+    historyApiFallback: true,
   },
 };
