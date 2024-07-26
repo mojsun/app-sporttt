@@ -129,7 +129,7 @@ module.exports = {
     },
     host: "0.0.0.0",
     port: 3000,
-    allowedHosts: [".herokuapp.com"],
+    allowedHosts: ["appsportt-8aab89cb6b82.herokuapp.com"],
     headers: {
       "Access-Control-Allow-Origin": "*",
     },
